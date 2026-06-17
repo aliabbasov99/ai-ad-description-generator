@@ -1,6 +1,6 @@
 import 'dotenv/config'
 const PORT = process.env.PORT || 2000
-const FRONTEND_URL = process.env.FRONTEND_URL
+
 
 import express from "express"
 const app = express()
