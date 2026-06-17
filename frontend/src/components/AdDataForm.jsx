@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setAdData } from '../store/adSlice.js';
 import { setLoading, setInfoArea } from '../store/uiSlice.js';
-const VITE_BACKEND_URL = process.env.VITE_BACKEND_URL
+const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL
 
 const changeState = (e, setState) =>{
   setState(e.target.value)
