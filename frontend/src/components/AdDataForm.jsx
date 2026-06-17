@@ -8,7 +8,6 @@ const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL
 
 const changeState = (e, setState) =>{
   setState(e.target.value)
-  console.log("messi")
 }
 
 
