@@ -7,11 +7,7 @@ const app = express()
 app.use(express.json())
 
 import cors from "cors"
-app.use(cors({
-  origin: FRONTEND_URL, // Frontend adresiniz
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
-}));
+app.use(cors());
 
 import {GoogleGenAI} from '@google/genai';
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
