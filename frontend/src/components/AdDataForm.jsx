@@ -24,7 +24,7 @@ const AddDataForm = () => {
     dispatch(setLoading(true))
 
     try {
-      const response = await axios.post(VITE_BACKEND_URL, {
+      const response = await axios.post(VITE_BACKEND_URL+"/generate-ad-text", {
           businessName,
           productInfo
         });
