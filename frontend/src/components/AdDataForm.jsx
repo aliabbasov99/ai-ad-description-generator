@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setAdData } from '../store/adSlice.js';
 import { setLoading, setInfoArea } from '../store/uiSlice.js';
-
+const VITE_BACKEND_URL = process.env.VITE_BACKEND_URL
 
 const changeState = (e, setState) =>{
   setState(e.target.value)
@@ -24,7 +24,7 @@ const AddDataForm = () => {
     dispatch(setLoading(true))
 
     try {
-      const response = await axios.post('http://localhost:2000/generate-ad-text', {
+      const response = await axios.post(VITE_BACKEND_URL, {
           businessName,
           productInfo
         });
