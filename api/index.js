@@ -82,4 +82,4 @@ və ya başqa heç nə yazma. Birinci simvol { olmalıdır.
 
 
 
-app.listen(PORT, ()=>{ console.log(`API is up at port ${PORT}`) })
+app.listen(PORT, '0.0.0.0', ()=>{ console.log(`API is up at port ${PORT}`) })
