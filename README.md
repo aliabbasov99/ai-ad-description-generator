@@ -7,6 +7,9 @@ Sadecə Biznes adı və məhsulunuz haqqında məlumat daxil etməyiniz kifayət
 
 ![alt text](https://i.imgur.com/J1kSlms.png "Numune resim")
 
+Frontend üçün: React, MateriaUI, Redux \n
+Backend üçün: Express.js -istafadə olunmuşdur.
+
 ## Quraşdırma
 
 İlk öncə API qovluğu içərisində .env faylında ```GEMINI_API_KEY``` və backend üçün ```PORT``` təyin etməliyik. 
