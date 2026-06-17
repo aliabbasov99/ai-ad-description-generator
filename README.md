@@ -7,7 +7,7 @@ Sadecə Biznes adı və məhsulunuz haqqında məlumat daxil etməyiniz kifayət
 
 ![alt text](https://i.imgur.com/J1kSlms.png "Numune resim")
 
-Frontend üçün: React, MateriaUI, Redux \n
+Frontend üçün: React, MateriaUI, Redux__
 Backend üçün: Express.js -istafadə olunmuşdur.
 
 ## Quraşdırma
