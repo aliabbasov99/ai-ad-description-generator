@@ -18,6 +18,7 @@ api/.env
 ```
 PORT = <SIZIN_BACKEND_PORTUNUZ>
 GEMINI_API_KEY = <SIZIN_AI_KEY>
+FRONTEND_URL = <FRONTENDINIZIN_URL_LINKI_YALNIZ_DEPLOYMENT_UCUN>
 ```
 
 Ardından frontend-də backend in adresini təyin edirik.
