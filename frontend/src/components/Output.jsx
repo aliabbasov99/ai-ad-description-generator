@@ -1,25 +1,20 @@
 import Box from "@mui/material/Box";
 import { Typography, CircularProgress } from "@mui/material";
-import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const Output = () => {
-  const [ loading, setLoading ] = useState(false)
-  const [ aiData, setAiData ] = useState("saf")
-
-  const [ aiDesc, setAiDesc] = useState("")
-  const [ cta, setCta] = useState("")
-  const [ hashtags, setHashtags] = useState([])
-
+    const { aiDesc, cta, hashtags, success } = useSelector((state) => state.ad);
+    const { loading, infoArea } = useSelector((state) => state.ui);
   return (
         <>
         
-            <Typography variant="body1" color="text.primary">
+            <Typography variant="body1" component="div" color="text.primary">
                 {/* loading state, cavab alindiqda cavab gorunece ve ya error  */}
                 { loading ? (
                     <CircularProgress sx={{marginTop:2}} size={"40px"} aria-label="Loading…" />
-                ) : aiData ? (
+                ) : success ? (
                     <Box sx={{marginTop:1}}>
-                        <Typography variant="h6">Reklam mətni</Typography>
+                        <Typography component="div" variant="h6">Reklam mətni</Typography>
                         <Box
                         sx={{
                             backgroundColor: 'rgba(255, 255, 255, 0.09)',
@@ -35,7 +30,7 @@ const Output = () => {
                             {aiDesc}
                         </Box>
 
-                        <Typography variant="h6">CTA (Call To Action)</Typography>
+                        <Typography component="div" variant="h6">CTA (Call To Action)</Typography>
                         <Box
                         sx={{
                             backgroundColor: 'rgba(255, 255, 255, 0.09)',
@@ -51,7 +46,7 @@ const Output = () => {
                             {cta}
                         </Box>
 
-                        <Typography variant="h6">Hashtag-lər</Typography>
+                        <Typography component="div" variant="h6">Hashtag-lər</Typography>
                         <Box
                         sx={{
                             backgroundColor: 'rgba(255, 255, 255, 0.09)',
@@ -62,6 +57,7 @@ const Output = () => {
                             width: '100%',
                             boxSizing: 'border-box',
                             whiteSpace: 'pre-line',
+                            marginBottom: 2
                         }}
                         >
                             {hashtags}
@@ -72,7 +68,7 @@ const Output = () => {
 
 
                     ) : (
-                    <span>Xahiş olunur məlumatları daxil edin...</span>
+                    <span>{infoArea}</span>
                 ) }
             </Typography>
         </>
