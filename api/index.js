@@ -1,13 +1,13 @@
 import 'dotenv/config'
-const PORT = process.env.PORT || 2000
-
-
 import express from "express"
-const app = express()
-app.use(express.json())
-
 import cors from "cors"
-app.use(cors());
+import { GoogleGenAI } from '@google/genai'
+
+const PORT = process.env.PORT || 2000
+const app = express()
+
+app.use(cors())
+app.use(express.json())
 
 import {GoogleGenAI} from '@google/genai';
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
